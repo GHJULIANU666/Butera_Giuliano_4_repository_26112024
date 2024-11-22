@@ -1,7 +1,7 @@
 function editNav() {
   const x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
-    x.className += " responsive";
+    x.className += "responsive";
   } else {
     x.className = "topnav";
   }
@@ -101,11 +101,11 @@ function validate() {
 
   // Firstname validation
   if (firstname.trim() == "") {
-    errorFirstname.textContent = "Veuillez renseigner votre prÃ©nom svp";
+    errorFirstname.textContent = "Veuillez renseigner votre prénom svp";
     inputFirstname.classList.add("invalid");
     isValid = false;
   } else if (firstname.trim().length < 2) {
-    errorFirstname.textContent = "Votre prÃ©nom est trop court !";
+    errorFirstname.textContent = "Votre prénom est trop court !";
     inputFirstname.classList.add("invalid");
     inputFirstname.classList.remove("valid");
     isValid = false;
@@ -185,31 +185,31 @@ function validate() {
   // creating Date objects
   const birthdateUser = new Date(birthdate); // birthdate of the user
   const today = new Date(); // the current date and time
-  const thirteenYearsAgo = new Date(); 
-  thirteenYearsAgo.setFullYear(today.getFullYear() - 13); // set the value of the object 13 years before the current date
-  const _123YearsAgo = new Date();
-  _123YearsAgo.setFullYear(today.getFullYear() - 123); // set the value of the object 123 years before the current date
+  const eighteenYearsAgo = new Date(); 
+  eighteenYearsAgo.setFullYear(today.getFullYear() - 18); // set the value of the object 18 years before the current date
+  const _150YearsAgo = new Date();
+  _150YearsAgo.setFullYear(today.getFullYear() - 150); // set the value of the object 150 years before the current date
 
   if (birthdate == "" || birthdate == null) {
     errorBirthdate.textContent = "Veuillez entrer votre date de naissance svp";
     inputBirthdate.classList.add("invalid");
     inputBirthdate.classList.remove("valid");
     isValid = false;
-  } else if (birthdateUser < _123YearsAgo) {
+  } else if (birthdateUser < _150YearsAgo) {
     errorBirthdate.textContent =
       "Veuillez entrer une date de naissance valide svp";
     inputBirthdate.classList.add("invalid");
     inputBirthdate.classList.remove("valid");
     isValid = false;
-  } else if (birthdateUser > thirteenYearsAgo) {
+  } else if (birthdateUser > eighteenYearsAgo) {
     errorBirthdate.textContent =
-      "DÃ©solÃ©, vous n'avez pas l'Ã¢ge requis pour participer !";
+      "Désolé, vous n'avez pas l'âge requis pour participer !";
     inputBirthdate.classList.add("invalid");
     inputBirthdate.classList.remove("valid");
     isValid = false;
   } else if (
-    birthdateUser >= _123YearsAgo &&
-    birthdateUser <= thirteenYearsAgo
+    birthdateUser >= _150YearsAgo &&
+    birthdateUser <= eighteenYearsAgo
   ) {
     errorBirthdate.textContent = "";
     inputBirthdate.classList.add("valid");

@@ -97,7 +97,47 @@ img {
   .topnav a.icon {
     float: right;
     display: block;
-    margin-top: -15px;
+    margin-top: 0px;
+  }
+  img {
+    height: 30px;
+  }
+  .hero-content {
+    margin-right: 20%;
+    width: 800px;
+  }
+  .topnav .active {
+    margin-top: 21%;
+}
+  .hero-headline {
+    font-size: 3.5rem!important;
+    margin-left: -2%;
+    margin-top: -3%;
+  }
+  .hero-text {
+    margin-top: 3%!important;   
+    font-size: 1rem!important;
+    margin-left: -2%;
+    width: 450px!important;
+  }
+} 
+@media screen and (max-width: 400px) {
+  .header-logo {
+    margin-left: 16px
+  }
+  .hero-content {
+    margin-right: 20%;
+    width: 600px;
+  }
+  .hero-headline {
+    font-size: 2.3rem!important;
+    margin-left: -3.3%;
+  }
+  .hero-text {
+    font-size: 0.75rem!important;
+    width: 330px!important;
+    margin-left: -3.5%;
+    margin-bottom: -3%;
   }
 } 
 
